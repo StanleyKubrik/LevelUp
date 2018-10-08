@@ -1,7 +1,18 @@
 public class CondStatements {
 
     public String fourth (double x, double y){
-        if (x > 0 && y > 0){
+
+        try{
+
+        } catch (Exception e){
+            e.getMessage();
+        }
+
+        if (x == 0){
+            throw new IllegalArgumentException("Координата Y находится на оси");
+        }else if (y == 0){
+            throw new IllegalArgumentException("Координата X находится на оси");
+        } else if (x > 0 && y > 0){
             return "Точка находится в 1-й четверти";
         } else if (x < 0 && y > 0){
             return "Точка находится во 2-й четверти";
