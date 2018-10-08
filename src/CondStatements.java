@@ -43,4 +43,22 @@ public class CondStatements {
         int res = Math.max(a * b * c, a + b + c) + 3;
         System.out.println(res);
     }
+
+    public static void grade (int value){
+        String str;
+        if (value >= 0 && value <= 19){
+            str = "F";
+        } else if (value >= 20 && value <= 39){
+            str = "E";
+        } else if (value >= 40 && value <= 59){
+            str = "D";
+        } else if (value >= 60 && value <= 74){
+            str = "C";
+        } else if (value >= 75 && value <= 89){
+            str = "B";
+        } else {
+            str = "A";
+        }
+        System.out.println(str);
+    }
 }

@@ -11,5 +11,6 @@ public class Main {
         CondStatements.ifa(6,3);
         CondStatements.sum3dig(4, 5, -2);
         CondStatements.max(4, 0, 82);
+        CondStatements.grade(95);
     }
 }
