@@ -9,5 +9,7 @@ public class Main {
 
         CondStatements.fourth(13, -2);
         CondStatements.ifa(6,3);
+        CondStatements.sum3dig(4, 5, -2);
+        CondStatements.max(4, 0, 82);
     }
 }
