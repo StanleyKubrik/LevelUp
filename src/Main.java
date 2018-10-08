@@ -6,11 +6,16 @@ public class Main {
 //        Converter.tnvunc(35.54);
 //        Converter.cvf(36.6f);
 //        Converter.kvc(0);
-
-        CondStatements.fourth(13, -2);
-        CondStatements.ifa(6,3);
-        CondStatements.sum3dig(4, 5, -2);
-        CondStatements.max(4, 0, 82);
-        CondStatements.grade(95);
+        init();
+    }
+    
+    public static void init(){
+        CondStatements cs = new CondStatements();
+        
+        cs.fourth(13, -2);
+        cs.ifa(6,3);
+        cs.sum3dig(4, 5, -2);
+        cs.max(4, 0, 82);
+        cs.grade(95);
     }
 }
