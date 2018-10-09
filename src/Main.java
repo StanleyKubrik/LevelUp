@@ -13,7 +13,7 @@ public class Main {
         CondStatements cs = new CondStatements();
         
         cs.fourth(13, -2);
-        cs.ifa(6,3);
+        cs.ifa(6);
         cs.sum3dig(4, 5, -2);
         cs.max(4, 0, 82);
         cs.grade(95);

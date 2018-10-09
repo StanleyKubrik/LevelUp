@@ -1,5 +1,4 @@
 public class CondStatements {
-
     public String fourth (double x, double y){
         if (x == 0){
             throw new IllegalArgumentException("Координата Y находится на оси");
@@ -16,31 +15,16 @@ public class CondStatements {
         }
     }
 
-    public String ifa (double a, double b){
-        double sum;
+    public String ifa (int a){
         if (a % 2 == 0){
-            sum = a * b;
+            return String.valueOf(a * 10);
         } else {
-            sum = a + b;
+            return String.valueOf(a + 10);
         }
-        return String.valueOf(sum);
     }
 
     public String sum3dig (int dig1, int dig2, int dig3){
         int sum = 0;
-//        if (dig1 < 0 && dig2 < 0){
-//            sum = dig3;
-//        } else if (dig2 < 0 && dig3 < 0){
-//            sum = dig1;
-//        } else if (dig1 < 0 && dig3 < 0){
-//            sum = dig2;
-//        } else if (dig1 < 0){
-//            sum = dig2 + dig3;
-//        } else if (dig2 < 0){
-//            sum = dig1 + dig3;
-//        } else {
-//            sum = dig1 + dig2;
-//        }
         if (dig1 > 0){
             sum += dig1;
         }
