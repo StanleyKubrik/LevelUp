@@ -1,13 +1,6 @@
 public class CondStatements {
 
     public String fourth (double x, double y){
-
-        try{
-
-        } catch (Exception e){
-            e.getMessage();
-        }
-
         if (x == 0){
             throw new IllegalArgumentException("Координата Y находится на оси");
         }else if (y == 0){
