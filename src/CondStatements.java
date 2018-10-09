@@ -47,20 +47,21 @@ public class CondStatements {
     }
 
     public String grade (int value){
-        String str;
-        if (value >= 0 && value <= 19){
-            str = "F";
-        } else if (value >= 20 && value <= 39){
-            str = "E";
-        } else if (value >= 40 && value <= 59){
-            str = "D";
-        } else if (value >= 60 && value <= 74){
-            str = "C";
-        } else if (value >= 75 && value <= 89){
-            str = "B";
-        } else {
-            str = "A";
+        if (value < 0){
+            throw new IllegalArgumentException("Недопустимо значение меньше 0");
         }
-        return str;
+        if (value >= 0 && value <= 19){
+            return "F";
+        } else if (value >= 20 && value <= 39){
+            return "E";
+        } else if (value >= 40 && value <= 59){
+            return "D";
+        } else if (value >= 60 && value <= 74){
+            return "C";
+        } else if (value >= 75 && value <= 89){
+            return "B";
+        } else {
+            return "A";
+        }
     }
 }

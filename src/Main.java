@@ -11,11 +11,11 @@ public class Main {
     
     public static void init(){
         CondStatements cs = new CondStatements();
-        
-        cs.fourth(13, -2);
-        cs.ifa(6);
-        cs.sum3dig(4, 5, -2);
-        cs.max(4, 0, 82);
-        cs.grade(95);
+
+        System.out.println(cs.fourth(13, -2));
+        System.out.println(cs.ifa(6));
+        System.out.println(cs.sum3dig(4, 5, -2));
+        System.out.println(cs.max(4, 0, 82));
+        System.out.println(cs.grade(95));
     }
 }
