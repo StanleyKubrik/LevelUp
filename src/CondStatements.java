@@ -60,8 +60,10 @@ public class CondStatements {
             return "C";
         } else if (value >= 75 && value <= 89){
             return "B";
-        } else {
+        } else if (value >= 90 && value <=100) {
             return "A";
+        } else {
+            return "Введённое значение вне диапазона";
         }
     }
 }
