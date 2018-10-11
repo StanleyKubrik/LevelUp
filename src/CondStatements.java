@@ -46,7 +46,7 @@ public class CondStatements {
         return String.valueOf(res);
     }
 
-    public String grade (int value){
+    public String grade(int value){
         if (value < 0){
             throw new IllegalArgumentException("Недопустимо значение меньше 0");
         }

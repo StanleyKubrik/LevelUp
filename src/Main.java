@@ -10,12 +10,18 @@ public class Main {
     }
     
     public static void init(){
-        CondStatements cs = new CondStatements();
+//        CondStatements cs = new CondStatements();
+//
+//        System.out.println(cs.fourth(13, -2));
+//        System.out.println(cs.ifa(6));
+//        System.out.println(cs.sum3dig(4, 5, -2));
+//        System.out.println(cs.max(4, 0, 82));
+//        System.out.println(cs.grade(95));
 
-        System.out.println(cs.fourth(13, -2));
-        System.out.println(cs.ifa(6));
-        System.out.println(cs.sum3dig(4, 5, -2));
-        System.out.println(cs.max(4, 0, 82));
-        System.out.println(cs.grade(95));
+        Cycles cycles = new Cycles();
+
+        System.out.println(cycles.even(1, 99));
+        System.out.println(cycles.simpledig(5.463));
+        System.out.println(cycles.factorial(10));
     }
 }
