@@ -23,5 +23,7 @@ public class Main {
         System.out.println(cycles.even(1, 99));
         System.out.println(cycles.simpledig(5.463));
         System.out.println(cycles.factorial(10));
+        System.out.println(cycles.sumalldig(123));
+        System.out.println(cycles.mirror(12345));
     }
 }

@@ -33,4 +33,20 @@ public class Cycles {
         }
         return fact;
     }
+
+    public int sumalldig(int number){
+        if (number == 0){
+            throw new IllegalArgumentException("Недопустимое значение 0");
+        }
+        int sum = 0;
+        while (number != 0){
+            sum += (number % 10);
+            number /= 10;
+        }
+        return sum;
+    }
+
+    public int mirror(int number){
+        return 0;
+    }
 }

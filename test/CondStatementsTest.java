@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestCondStatements {
+public class CondStatementsTest {
     private CondStatements cs;
 
     @Before
