@@ -20,10 +20,10 @@ public class Main {
 
         Cycles cycles = new Cycles();
 
-        System.out.println(cycles.even(1, 99));
+        System.out.println(cycles.even(99, 1));
         System.out.println(cycles.simpledig(5.463));
-        System.out.println(cycles.factorial(10));
+        System.out.println(cycles.factorial(5));
         System.out.println(cycles.sumalldig(123));
-        System.out.println(cycles.mirror(12345));
+        cycles.mirror(1234567);
     }
 }

@@ -11,11 +11,14 @@ public class Cycles {
                 i++;
             }
         }
-        return "Кол-во чётных чисел в диапазоне от 1 до 99: " + count
+        return "Кол-во чётных чисел в диапазоне от " + from + " до " + to +": " + count
                 + "\nСумма чётных чисел: " + sum;
     }
 
     public String simpledig(double dig){
+        if (dig < 0){
+            throw new IllegalArgumentException("Простое число отрицательным быть не может!");
+        }
         if (dig == 0){
             throw new IllegalArgumentException("Число 0 не является ни простым, ни составным.");
         }
@@ -26,27 +29,37 @@ public class Cycles {
         }
     }
 
-    public int factorial(int dig){
+    public String factorial(int dig){
         int fact = 1;
+        if (dig < 0){
+            throw new IllegalArgumentException("Факториала отрицательного числа не существует!");
+        }
+        if (dig == 0){
+            fact = 1;
+        }
         for (int i = 2; i < dig + 1; i++){
             fact *= i;
         }
-        return fact;
+        return "Факториал числа " + dig + ": " + fact;
     }
 
-    public int sumalldig(int number){
+    public String sumalldig(int number){
         if (number == 0){
             throw new IllegalArgumentException("Недопустимое значение 0");
         }
         int sum = 0;
+        int snumber = number;
         while (number != 0){
             sum += (number % 10);
             number /= 10;
         }
-        return sum;
+        return "Сумма цифр числа " + snumber + ": " + sum;
     }
 
-    public int mirror(int number){
-        return 0;
+    public void mirror(int number){
+        while (number != 0){
+            System.out.print(number % 10);
+            number /= 10;
+        }
     }
 }
