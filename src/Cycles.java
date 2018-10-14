@@ -29,6 +29,17 @@ public class Cycles {
         }
     }
 
+    public String sqrt(int dig){
+        if (dig < 0){
+            throw new IllegalArgumentException("Корень из отрицательного числа равняется 0.");
+        }
+        if (dig == 0){
+            throw new IllegalArgumentException("Корень из нуля равняется 0.");
+        }
+        int res = (int) Math.sqrt(dig);
+        return "Корень числа " + dig + ": " + res;
+    }
+
     public String factorial(int dig){
         int fact = 1;
         if (dig < 0){
@@ -56,10 +67,14 @@ public class Cycles {
         return "Сумма цифр числа " + snumber + ": " + sum;
     }
 
-    public void mirror(int number){
-        while (number != 0){
+    public void mirror(int number) {
+        while (number != 0) {
             System.out.print(number % 10);
             number /= 10;
         }
+        System.out.println();
+//        String str = "qwerty";
+//        String reverse = new StringBuffer(str).reverse().toString();
+//        System.out.println(reverse);
     }
 }

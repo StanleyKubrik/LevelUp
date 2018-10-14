@@ -57,4 +57,6 @@ public class CyclesTest {
     public void factorial_5(){
         assertEquals("Факториал числа 5: 120", cycles.factorial(5));
     }
+
+
 }
