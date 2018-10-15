@@ -67,14 +67,25 @@ public class Cycles {
         return "Сумма цифр числа " + snumber + ": " + sum;
     }
 
-    public void mirror(int number) {
-        while (number != 0) {
-            System.out.print(number % 10);
-            number /= 10;
-        }
-        System.out.println();
+//    public void mirror(int number) {
+//        while (number != 0) {
+//            System.out.print(number % 10);
+//            number /= 10;
+//        }
+//        System.out.println();
 //        String str = "qwerty";
 //        String reverse = new StringBuffer(str).reverse().toString();
 //        System.out.println(reverse);
+//    }
+
+    public int reverse(int dig){
+        int res = 0;
+        while (dig != 0){
+            int f = dig % 10;
+            dig /= 10;
+            if (res != 0) res *= 10;
+            res += f;
+        }
+        return res;
     }
 }

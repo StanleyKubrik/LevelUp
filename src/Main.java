@@ -1,6 +1,8 @@
+import java.io.IOException;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 //        Converter.grvkg(124030);
 //        Converter.kgvtn(42461);
 //        Converter.tnvunc(35.54);
@@ -9,7 +11,7 @@ public class Main {
         init();
     }
     
-    public static void init(){
+    public static void init() throws Exception {
 //        CondStatements cs = new CondStatements();
 //
 //        System.out.println(cs.fourth(13, -2));
@@ -18,14 +20,17 @@ public class Main {
 //        System.out.println(cs.max(4, 0, 82));
 //        System.out.println(cs.grade(95));
 
-        Cycles cycles = new Cycles();
+//        Cycles cycles = new Cycles();
+//
+//        System.out.println(cycles.even(99, 1));
+//        System.out.println(cycles.simpledig(5.463));
+//        System.out.println(cycles.sqrt(-1));
+//        System.out.println(cycles.factorial(5));
+//        System.out.println(cycles.sumalldig(123));
+//        System.out.println(cycles.reverse(12345));
 
-        System.out.println(cycles.even(99, 1));
-        System.out.println(cycles.simpledig(5.463));
-        System.out.println(cycles.sqrt(-1));
-        System.out.println(cycles.factorial(5));
-        System.out.println(cycles.sumalldig(123));
-        cycles.mirror(1234567);
+        ClassWork cw = new ClassWork();
 
+        cw.cw1();
     }
 }
