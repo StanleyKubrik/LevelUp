@@ -31,6 +31,9 @@ public class Main {
 
         ClassWork cw = new ClassWork();
 
-        cw.cw1();
+//        cw.cw1();
+//        cw.max();
+        cw.bufferMax();
+
     }
 }
