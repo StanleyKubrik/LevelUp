@@ -3,15 +3,18 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-//        Converter.grvkg(124030);
-//        Converter.kgvtn(42461);
-//        Converter.tnvunc(35.54);
-//        Converter.cvf(36.6f);
-//        Converter.kvc(0);
         init();
     }
     
     public static void init() throws Exception {
+//        Converter converter = new Converter();
+//
+//        converter.grvkg(124030);
+//        converter.kgvtn(42461);
+//        converter.tnvunc(35.54);
+//        converter.cvf(36.6f);
+//        converter.kvc(0);
+
 //        CondStatements cs = new CondStatements();
 //
 //        System.out.println(cs.fourth(13, -2));
