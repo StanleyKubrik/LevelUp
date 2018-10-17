@@ -1,9 +1,12 @@
+import javax.print.attribute.standard.Fidelity;
 import java.io.IOException;
+import java.lang.reflect.Field;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        init();
+//        init();
+        System.out.println(MathMy.sqrt(144));
     }
     
     public static void init() throws Exception {

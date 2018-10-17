@@ -31,10 +31,10 @@ public class Cycles {
 
     public String sqrt(int dig){
         if (dig < 0){
-            throw new IllegalArgumentException("Корень из отрицательного числа равняется 0.");
+            throw new IllegalArgumentException("Корень из отрицательного числа равняется 0!");
         }
         if (dig == 0){
-            throw new IllegalArgumentException("Корень из нуля равняется 0.");
+            throw new IllegalArgumentException("Корень из нуля равняется 1!");
         }
         int res = (int) Math.sqrt(dig);
         return "Корень числа " + dig + ": " + res;
