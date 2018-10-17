@@ -82,17 +82,12 @@ public class ClassWork {
             int number3 = Integer.parseInt(bufferedReader.readLine());
             System.out.println("Введите число D:");
             int number4 = Integer.parseInt(bufferedReader.readLine());
-            System.out.println("Максимальное число: " + max(number1, number2, number3, number4));
+            System.out.println("Максимальное число: " + MathMy.max(number1, number2, number3, number4));
         } catch (NumberFormatException e) {
             System.out.println("Введите число!");
             bufferMax();
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public int max(int numberA, int numberB, int numberC, int numberD){
-        int max = Math.max(Math.max(numberA, numberB), Math.max(numberC, numberD));
-        return max;
     }
 }
