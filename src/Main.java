@@ -5,8 +5,7 @@ import java.lang.reflect.Field;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-//        init();
-        System.out.println(MathMy.sqrt(144));
+        init();
     }
     
     public static void init() throws Exception {
@@ -39,7 +38,11 @@ public class Main {
 
 //        cw.cw1();
 //        cw.max();
-        cw.bufferMax();
+//        cw.bufferMax();
+//        cw.even();
+//        cw.notEven();
+        ConsoleCalc consoleCalc = new ConsoleCalc();
 
+        consoleCalc.calc();
     }
 }

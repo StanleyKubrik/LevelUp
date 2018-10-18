@@ -90,4 +90,28 @@ public class ClassWork {
             e.printStackTrace();
         }
     }
+
+    public void even(){
+        for (int i = 0; i <= 40;){
+            if (i % 2 == 0){
+                System.out.print(i + " ");
+                i++;
+            } else {
+                i++;
+            }
+        }
+        System.out.println();
+    }
+
+    public void notEven(){
+        for (int i = 0; i <= 40;){
+            if (i % 2 != 0){
+                System.out.print(i + " ");
+                i++;
+            } else {
+                i++;
+            }
+        }
+        System.out.println();
+    }
 }

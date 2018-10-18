@@ -55,7 +55,7 @@ public class Cycles {
     }
 
     public String sumalldig(int number){
-        if (number == 0){
+        if (number <= 9){
             throw new IllegalArgumentException("Недопустимое значение 0");
         }
         int sum = 0;

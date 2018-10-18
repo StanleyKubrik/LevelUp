@@ -44,6 +44,21 @@ public class CyclesTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
+    public void sqrt_negative(){
+        cycles.sqrt(-1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void sqrt_0(){
+        cycles.sqrt(0);
+    }
+
+    @Test
+    public void sqrt_144(){
+        assertEquals("Корень числа 144: 12", cycles.sqrt(144));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
     public void factorial_negative(){
         cycles.factorial(-1);
     }
@@ -58,5 +73,13 @@ public class CyclesTest {
         assertEquals("Факториал числа 5: 120", cycles.factorial(5));
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void sumalldig_9(){
+        cycles.sumalldig(9);
+    }
 
+    @Test
+    public void sumalldig_123(){
+        assertEquals("Сумма цифр числа 123: 6", cycles.sumalldig(123));
+    }
 }
