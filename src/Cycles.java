@@ -36,7 +36,7 @@ public class Cycles {
         if (dig == 0){
             throw new IllegalArgumentException("Корень из нуля равняется 1!");
         }
-        int res = (int) Math.sqrt(dig);
+        int res = MathMy.sqrt(dig);
         return "Корень числа " + dig + ": " + res;
     }
 
