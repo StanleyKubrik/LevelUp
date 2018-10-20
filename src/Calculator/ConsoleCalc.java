@@ -47,14 +47,14 @@ public class ConsoleCalc {
                             if (numberB == 0) {
                                 System.out.println("ОШИБКА: На ноль делить нельзя!");
                             } else {
-                                System.out.println(numberA + " / " + numberB + " = " + (numberA % numberB));
+                                System.out.println(numberA + " / " + numberB + " = " + (numberA / numberB));
                                 break;
                             }
                         case "%":
                             if (numberB == 0) {
                                 System.out.println("ОШИБКА: На ноль делить нельзя!");
                             } else {
-                                System.out.println(numberA + " % " + numberB + " = " + (numberA / numberB));
+                                System.out.println(numberA + " % " + numberB + " = " + (numberA % numberB));
                                 break;
                             }
                     }
