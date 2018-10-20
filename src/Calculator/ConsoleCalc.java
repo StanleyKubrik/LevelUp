@@ -13,6 +13,7 @@ package Calculator;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.text.DecimalFormat;
 
 public class ConsoleCalc {
     public void calc() throws Exception {
@@ -26,9 +27,7 @@ public class ConsoleCalc {
                 System.out.println("Введите код операции:");
                 code = bufferedReader.readLine();
 
-                if (code.equals("+") || code.equals("-") || code.equals("*") || code.equals("/") || code.equals("%")
-                        || code.equals("rand")) {
-
+                if (code.equals("+") || code.equals("-") || code.equals("*") || code.equals("/") || code.equals("%")) {
                     System.out.println("Введите 1-е число:");
                     numberA = Integer.parseInt(bufferedReader.readLine());
                     System.out.println("Введите 2-е число:");
@@ -70,6 +69,16 @@ public class ConsoleCalc {
                         case "root":
                             System.out.println(numberA + " ^ " + numberB + " = " + (Math.pow(numberA, 1.0 / numberB)));
                     }
+                } else if (code.equals("rand")) {
+                    System.out.println("Введите нижнюю границу интервала:");
+                    numberA = Integer.parseInt(bufferedReader.readLine());
+                    System.out.println("Введите верхнюю границу интервала:");
+                    numberB = Integer.parseInt(bufferedReader.readLine());
+
+                    double res = Math.random() * (numberB - numberA + 1) + numberA;
+                    String formattedDounle = new DecimalFormat("#0.00").format(res);
+                    System.out.println("Случайное число в интервале от " + numberA + " до " + numberB + ": "
+                            + formattedDounle);
                 } else {
                     switch (code) {
                         case "exit":
