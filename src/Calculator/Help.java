@@ -1,5 +1,6 @@
 package Calculator;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 class Help {
@@ -21,5 +22,12 @@ class Help {
         for (String string : help){
             System.out.println(string);
         }
+    }
+
+    static void random(double numberA, double numberB){
+        double res = Math.random() * (numberB - numberA + 1) + numberA;
+        String formattedDounle = new DecimalFormat("#0.00").format(res);
+        System.out.println("Случайное число в интервале от " + numberA + " до " + numberB + ": "
+                + formattedDounle);
     }
 }

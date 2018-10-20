@@ -75,10 +75,7 @@ public class ConsoleCalc {
                     System.out.println("Введите верхнюю границу интервала:");
                     numberB = Integer.parseInt(bufferedReader.readLine());
 
-                    double res = Math.random() * (numberB - numberA + 1) + numberA;
-                    String formattedDounle = new DecimalFormat("#0.00").format(res);
-                    System.out.println("Случайное число в интервале от " + numberA + " до " + numberB + ": "
-                            + formattedDounle);
+                    Help.random(numberA, numberB);
                 } else {
                     switch (code) {
                         case "exit":
