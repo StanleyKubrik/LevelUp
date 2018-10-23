@@ -13,25 +13,25 @@ package Calculator;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.text.DecimalFormat;
 
 public class ConsoleCalc {
-    public void calc() throws Exception {
-        double numberA;
-        double numberB;
-        String code;
+    private double numberA;
+    private double numberB;
+    private String code = "";
 
-        try {
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-            do {
+    public void calc() throws Exception {
+        do {
+            try {
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
                 System.out.println("Введите код операции:");
                 code = bufferedReader.readLine();
 
                 if (code.equals("+") || code.equals("-") || code.equals("*") || code.equals("/") || code.equals("%")) {
                     System.out.println("Введите 1-е число:");
-                    numberA = Integer.parseInt(bufferedReader.readLine());
+                    numberA = Double.parseDouble(bufferedReader.readLine().replace(',', '.'));
                     System.out.println("Введите 2-е число:");
-                    numberB = Integer.parseInt(bufferedReader.readLine());
+                    numberB = Double.parseDouble(bufferedReader.readLine().replace(',', '.'));
 
                     switch (code) {
                         case "+":
@@ -87,12 +87,12 @@ public class ConsoleCalc {
                             break;
                     }
                 }
-            } while (!code.equalsIgnoreCase("exit"));
-        } catch (NumberFormatException e) {
-            System.out.println("Необходимо ввести число!");
-            calc();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            } catch (NumberFormatException e) {
+                System.out.println("Необходимо ввести число!");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } while (!code.equalsIgnoreCase("exit"));
+
     }
 }
