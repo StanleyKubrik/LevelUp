@@ -9,7 +9,7 @@
         rand Вывод случайного числа от A до B.
         help Вывод списка операций.
         exit Выход из программы. */
-package Calculator;
+package calculator;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -93,6 +93,5 @@ public class ConsoleCalc {
                 e.printStackTrace();
             }
         } while (!code.equalsIgnoreCase("exit"));
-
     }
 }

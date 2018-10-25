@@ -1,4 +1,5 @@
-import Calculator.ConsoleCalc;
+import arrays.Arrays1;
+import arrays.ClassArray;
 
 public class Main {
 
@@ -14,7 +15,7 @@ public class Main {
 //        converter.tnvunc(35.54);
 //        converter.cvf(36.6f);
 //        converter.kvc(0);
-
+//
 //        CondStatements cs = new CondStatements();
 //
 //        System.out.println(cs.fourth(13, -2));
@@ -22,7 +23,7 @@ public class Main {
 //        System.out.println(cs.sum3dig(4, 5, -2));
 //        System.out.println(cs.max(4, 0, 82));
 //        System.out.println(cs.grade(95));
-
+//
 //        Cycles cycles = new Cycles();
 //
 //        System.out.println(cycles.even(99, 1));
@@ -31,16 +32,38 @@ public class Main {
 //        System.out.println(cycles.factorial(5));
 //        System.out.println(cycles.sumalldig(123));
 //        System.out.println(cycles.reverse(12345));
-
-        ClassWork cw = new ClassWork();
-
+//
+//        ClassWork cw = new ClassWork();
+//
 //        cw.cw1();
-//        cw.max();
 //        cw.bufferMax();
 //        cw.even();
 //        cw.notEven();
-        ConsoleCalc consoleCalc = new ConsoleCalc();
+//        ConsoleCalc consoleCalc = new ConsoleCalc();
+//
+//        consoleCalc.calc();
+//
+//        cw.mass();
+//        cw.mass1();
+//        cw.mass2();
 
-        consoleCalc.calc();
+//        int[] arr = new int[34];
+//
+//        for (int i = 1; i < 100; i++){
+//            if (i % 3 == 0){
+//                arr[i / 3] = i;
+//            }
+//        }
+//
+//        Arrays1 arrays1 = new Arrays1();
+//
+//        arrays1.min(arr);
+//        arrays1.max(arr);
+//        arrays1.index_min(arr);
+//        arrays1.index_max(arr);
+//        arrays1.sum_not_even(arr);
+        ClassArray classArray = new ClassArray();
+
+        classArray.init();
     }
 }
