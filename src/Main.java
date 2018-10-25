@@ -1,5 +1,4 @@
-import arrays.Arrays1;
-import arrays.ClassArray;
+import arrays.ArraysChanger;
 
 public class Main {
 
@@ -55,15 +54,15 @@ public class Main {
 //            }
 //        }
 //
-//        Arrays1 arrays1 = new Arrays1();
+//        Arrays arrays1 = new Arrays();
 //
 //        arrays1.min(arr);
 //        arrays1.max(arr);
 //        arrays1.index_min(arr);
 //        arrays1.index_max(arr);
 //        arrays1.sum_not_even(arr);
-        ClassArray classArray = new ClassArray();
+        ArraysChanger arraysChanger = new ArraysChanger();
 
-        classArray.init();
+        arraysChanger.init();
     }
 }
