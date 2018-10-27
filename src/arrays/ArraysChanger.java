@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 public class ArraysChanger {
     private String code = "";
     private int[] arr;
-    BufferedReader bufferedReader;
+    private BufferedReader bufferedReader;
 
     public ArraysChanger() {
         bufferedReader = new BufferedReader(new InputStreamReader(System.in));
