@@ -88,7 +88,7 @@ public class ConsoleCalc {
                     }
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Необходимо ввести число!");
+                System.out.println("ОШИБКА: Необходимо ввести число!");
             } catch (Exception e) {
                 e.printStackTrace();
             }
