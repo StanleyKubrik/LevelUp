@@ -12,68 +12,32 @@ public class ArraysChanger {
 
     public ArraysChanger() {
         bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        init();
     }
 
-    public void init() {
+    private void init() {
+        try {
+            createList();
+            printArray(arr);
+            do {
+                System.out.println("\nВведите код операции: ");
+                code = bufferedReader.readLine();
+                codeOperation();
+            } while (!code.toLowerCase().equals("exit"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void createList(){
         try {
             System.out.println("Введите длину массива: ");
             int length = Integer.parseInt(bufferedReader.readLine());
             arr = new int[length];
+            System.out.println("Введите элементы массива:");
             for (int i = 0; i < arr.length; i++) {
-                System.out.println("Введите следующий элемент массива: ");
                 arr[i] = Integer.parseInt(bufferedReader.readLine());
             }
-            do {
-                System.out.println("Введите код операции: ");
-                code = bufferedReader.readLine();
-                switch (code) {
-                    case "print master":
-                        printArray(arr);
-                        break;
-                    case "print second":
-                        if (copy == null) {
-                            System.out.println("ОШИБКА: Сначала скопируйте массив!");
-                        } else {
-                            printArray(copy);
-                        }
-                        break;
-                    case "bsort":
-                        bubbleSort(arr);
-                        break;
-                    case "isort":
-                        insertSort(arr);
-                        break;
-                    case "copy":
-                        copy(arr);
-                        break;
-                    case "reverse":
-                        reverse(arr);
-                        break;
-                    case "min":
-                        min(arr);
-                        break;
-                    case "max":
-                        max(arr);
-                        break;
-                    case "exit":
-                        System.out.println("Программа завершена.");
-                        break;
-                    case "help":
-                    default:
-                        System.out.println("Список доступных команд: " +
-                                "\n bsort - Сортировка массива пузырьковым методом." +
-                                "\n isort - Сортировка массива методом вставки." +
-                                "\n copy - Копирование массива в массив copy." +
-                                "\n print master - Вывода исходного массива в консоль." +
-                                "\n print second - Вывода скопированного массива в консоль." +
-                                "\n min - Вывод минимального значения массива." +
-                                "\n max - Вывод максимального значения массива." +
-                                "\n reverse - Вывод массива задом наперёд" +
-                                "\n help - Список доступных комманд." +
-                                "\n exit - Завершение программы.");
-                        break;
-                }
-            } while (!code.toLowerCase().equals("exit"));
         } catch (NumberFormatException e) {
             System.out.println("ОШИБКА: Необходимо ввести число!");
         } catch (IOException e) {
@@ -81,6 +45,59 @@ public class ArraysChanger {
         }
     }
 
+    private void codeOperation(){
+        switch (code) {
+            case "print master":
+                printArray(arr);
+                break;
+            case "print copy":
+                if (copy == null) {
+                    System.out.println("ОШИБКА: Сначала скопируйте массив!");
+                } else {
+                    printArray(copy);
+                }
+                break;
+            case "bsort":
+                bubbleSort(arr);
+                break;
+            case "isort":
+                insertSort(arr);
+                break;
+            case "copy":
+                copy(arr);
+                break;
+            case "reverse":
+                reverse(arr);
+                break;
+            case "min":
+                min(arr);
+                break;
+            case "max":
+                max(arr);
+                break;
+            case "exit":
+                System.out.println("Программа завершена.");
+                break;
+            case "help":
+            default:
+                help();
+                break;
+        }
+    }
+
+    private void help(){
+        System.out.print("Список доступных команд: " +
+                "\n bsort - Сортировка массива пузырьковым методом." +
+                "\n isort - Сортировка массива методом вставки." +
+                "\n copy - Копирование массива в массив copy." +
+                "\n print master - Вывода исходного массива в консоль." +
+                "\n print copy - Вывода скопированного массива в консоль." +
+                "\n min - Вывод минимального значения массива." +
+                "\n max - Вывод максимального значения массива." +
+                "\n reverse - Вывод массива задом наперёд" +
+                "\n help - Список доступных комманд." +
+                "\n exit - Завершение программы.");
+    }
 
     private void bubbleSort(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
@@ -97,7 +114,6 @@ public class ArraysChanger {
         for (int i : arr) {
             System.out.print(i + " ");
         }
-        System.out.println();
     }
 
     private void insertSort(int[] arr) {
@@ -115,7 +131,6 @@ public class ArraysChanger {
         for (int i : arr) {
             System.out.print(i + " ");
         }
-        System.out.println();
     }
 
     private void copy(int[] arr) {
@@ -123,17 +138,16 @@ public class ArraysChanger {
     }
 
     private void printArray(int[] arr) {
+        System.out.println("Массив состоит из:");
         for (int i : arr) {
             System.out.print(i + " ");
         }
-        System.out.println();
     }
 
     private void reverse(int[] arr) {
         for (int i = arr.length - 1; i >= 0; i--) {
             System.out.print(arr[i] + " ");
         }
-        System.out.println();
     }
 
     private void min(int[] arr) {
@@ -143,7 +157,7 @@ public class ArraysChanger {
                 min = arr[i];
             }
         }
-        System.out.println("Минимальный элемент массива: " + min);
+        System.out.print("Минимальный элемент массива: " + min);
     }
 
     private void max(int[] arr) {
@@ -153,6 +167,6 @@ public class ArraysChanger {
                 max = arr[i];
             }
         }
-        System.out.println("Масимальный элемент массива: " + max);
+        System.out.print("Масимальный элемент массива: " + max);
     }
 }

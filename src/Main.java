@@ -63,7 +63,5 @@ public class Main {
 //        arrays1.index_max(arr);
 //        arrays1.sum_not_even(arr);
         ArraysChanger arraysChanger = new ArraysChanger();
-
-        arraysChanger.init();
     }
 }
