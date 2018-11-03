@@ -1,5 +1,4 @@
-import arrays.ArraysChanger;
-import calculator.ConsoleCalc;
+import arrays.Collection;
 
 public class Main {
 
@@ -62,6 +61,15 @@ public class Main {
 //        arrays1.index_min(arr);
 //        arrays1.index_max(arr);
 //        arrays1.sum_not_even(arr);
-        ArraysChanger arraysChanger = new ArraysChanger();
+//        ArraysChanger arraysChanger = new ArraysChanger();
+//        Collection collection = new Collection();
+//
+//        Dates dates = new Dates();
+//
+//        dates.printDateFromNow();
+
+        Stopwatch stopwatch = new Stopwatch();
+
+        stopwatch.fiveMin();
     }
 }
