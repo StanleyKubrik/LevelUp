@@ -29,9 +29,10 @@ public class Stopwatch {
             }
             date.setSeconds(seconds);
             date.setMinutes(minutes);
+            date.setHours(hours);
 
             System.out.println(formatTime(date.getTime()));
-            Thread.sleep(10);
+            Thread.sleep(1000);
         }
     }
 

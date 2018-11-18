@@ -1,6 +1,9 @@
-import arrays.Collection;
+import animals.Cat;
+import animals.Dog;
+import calculator.Frame;
+import function.NameOfDay;
 
-public class Main {
+public class  Main {
 
     public static void main(String[] args) throws Exception {
         init();
@@ -62,14 +65,57 @@ public class Main {
 //        arrays1.index_max(arr);
 //        arrays1.sum_not_even(arr);
 //        ArraysChanger arraysChanger = new ArraysChanger();
-//        Collection collection = new Collection();
 //
 //        Dates dates = new Dates();
 //
 //        dates.printDateFromNow();
 
-        Stopwatch stopwatch = new Stopwatch();
+//        Collection collection = new Collection();
 
-        stopwatch.fiveMin();
+//        Stopwatch stopwatch = new Stopwatch();
+//
+//        stopwatch.fiveMin();
+
+//        Cat cat = new Cat();
+//        cat.setName("Murzik");
+//        cat.setAge(2);
+//        System.out.println(cat.getName());
+//        System.out.println("Cat " + cat.getAge() + " years.");
+//        cat.say();
+//        cat.move();
+//
+//        Dog dog = new Dog();
+//        dog.setName("Bobik");
+//        dog.setAge(3);
+//        System.out.println(dog.getName());
+//        System.out.println("Dog " + dog.getAge() + " years.");
+//        dog.say();
+//        dog.move();
+
+//        new Frame();
+
+//        int num = 10;
+//        IList<Integer> list = new ListArr<>();
+//        list.type(num);
+//        list.add(num);
+//        int size = (int) (Math.random() * (200 + 1));
+//        for (int i = 0; i < size; i++) {
+//            list.add(i);
+//        }
+//        list.toArray();
+//        int index = list.size() - 1;
+//        System.out.println("size list = " + list.size());
+//        list.remove(index);
+//        System.out.println("size list = " + list.size());
+//        list.remove(0);
+//        System.out.println("size list = " + list.size());
+//        list.toArray();
+//        list.removeAll();
+//        list.toArray();
+//        System.out.println("size list = " + list.size());
+
+//        new NameOfDay(1);
+
+        new converter.Frame();
     }
 }
