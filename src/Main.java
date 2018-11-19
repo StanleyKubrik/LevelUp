@@ -2,13 +2,14 @@ import animals.Cat;
 import animals.Dog;
 import calculator.Frame;
 import function.NameOfDay;
+import myList.ListArr;
 
-public class  Main {
+public class Main {
 
     public static void main(String[] args) throws Exception {
         init();
     }
-    
+
     public static void init() throws Exception {
 //        Converter converter = new Converter();
 //
@@ -117,5 +118,12 @@ public class  Main {
 //        new NameOfDay(1);
 
         new converter.Frame();
+
+//        int[] ints = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//        ListArr listArr = new ListArr(ints);
+//        listArr.init(ints);
+//        listArr.delPos(5);
+//        for (int i : ints) {
+//            System.out.print(i + " ");
     }
 }

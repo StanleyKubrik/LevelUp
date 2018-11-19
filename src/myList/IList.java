@@ -19,14 +19,14 @@
 
 package myList;
 
-public interface IList<T> {
+public interface IList {
     void clear();
-    void init(T[] ini);
+    void init(int[] ini);
     void size();
-    void addStart(T val);
+    void addStart(int val);
     String toString();
-    void addEnd(T val);
-    void addPos(int pos, T val);
+    void addEnd(int val);
+    void addPos(int pos, int val);
     void delStart();
     void delEnd();
     void delPos(int pos);
@@ -35,5 +35,5 @@ public interface IList<T> {
     void minPos();
     void maxPos();
     void sort();
-    void get(int pos);
+    int get(int pos);
 }

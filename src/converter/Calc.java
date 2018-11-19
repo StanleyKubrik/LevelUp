@@ -1,5 +1,7 @@
 package converter;
 
+import java.text.DecimalFormat;
+
 public class Calc implements ICalc {
     private ICallBack iCallBack;
 
@@ -14,30 +16,35 @@ public class Calc implements ICalc {
     @Override
     public void grvkg(double gramm) {
         double kg = gramm / 1000;
-        iCallBack.callBack(String.valueOf(kg));
+        String formattedDouble = new DecimalFormat("#0.000").format(kg);
+        iCallBack.callBack(formattedDouble);
     }
 
     @Override
     public void kgvtn(double kg) {
         double tonna = kg / 1000;
-        iCallBack.callBack(String.valueOf(tonna));
+        String formattedDouble = new DecimalFormat("#0.00").format(tonna);
+        iCallBack.callBack(formattedDouble);
     }
 
     @Override
     public void tnvunc(double tonna) {
         double unc = tonna * 35274;
-        iCallBack.callBack(String.valueOf(unc));
+        String formattedDouble = new DecimalFormat("#0.00").format(unc);
+        iCallBack.callBack(formattedDouble);
     }
 
     @Override
     public void cvf(double c) {
         double f = (c * 9/5) + 32;
-        iCallBack.callBack(String.valueOf(f));
+        String formattedDouble = new DecimalFormat("#0.000").format(f);
+        iCallBack.callBack(formattedDouble);
     }
 
     @Override
     public void kvc(double k) {
         double c = k - 272.15;
-        iCallBack.callBack(String.valueOf(c));
+        String formattedDouble = new DecimalFormat("#0.000").format(c);
+        iCallBack.callBack(formattedDouble);
     }
 }
