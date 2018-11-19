@@ -60,12 +60,9 @@ public class Calc implements ICalc {
 
     @Override
     public void history() {
-        String message = null;
-        if (history.size() > 0) {
-            for (int i = 0; i < history.size(); i++) {
-
-            }
+        for (String str : history) {
+            iCallBack.callBackHistory(str);
         }
-        iCallBack.callBackHistory(message);
+        history.clear();
     }
 }

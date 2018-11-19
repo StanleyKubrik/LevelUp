@@ -2,6 +2,7 @@ package converter;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.List;
 
 public class Panel extends JPanel implements Calc.ICallBack {
     private JTextField txtIn;
@@ -15,7 +16,7 @@ public class Panel extends JPanel implements Calc.ICallBack {
     private JButton bt_history;
     private double value;
     private ICalc iCallBack;
-    private JLabel jLabel;
+    private JTextArea jTextArea;
 
     Panel(){
         setLayout(null);
@@ -30,7 +31,7 @@ public class Panel extends JPanel implements Calc.ICallBack {
         add(bt_kvc);
         add(bt_clear);
         add(bt_history);
-        add(jLabel);
+        add(jTextArea);
         listener();
     }
 
@@ -64,11 +65,11 @@ public class Panel extends JPanel implements Calc.ICallBack {
         bt_history = new JButton("History");
         bt_history.setBounds(285, 135, 100, 50);
 
-        jLabel = new JLabel();
-        jLabel.setBackground(Color.lightGray);
-        jLabel.setBounds(25, 10, 365, 400);
-        jLabel.setFont(new Font("Courier New", Font.PLAIN, 20));
-
+        jTextArea = new JTextArea();
+        jTextArea.setLineWrap(true);
+        jTextArea.setBackground(Color.lightGray);
+        jTextArea.setBounds(15, 195, 340, 350);
+        jTextArea.setFont(new Font("Courier New", Font.PLAIN, 20));
     }
 
     private void listener(){
@@ -102,7 +103,7 @@ public class Panel extends JPanel implements Calc.ICallBack {
         bt_clear.addActionListener(e -> {
             txtIn.setText("");
             txtOut.setText("");
-            jLabel.setText("");
+            jTextArea.setText("");
         });
 
         bt_history.addActionListener(e -> iCallBack.history());
@@ -115,6 +116,6 @@ public class Panel extends JPanel implements Calc.ICallBack {
 
     @Override
     public void callBackHistory(String message) {
-        jLabel.setText(message);
+        jTextArea.append(message);
     }
 }
