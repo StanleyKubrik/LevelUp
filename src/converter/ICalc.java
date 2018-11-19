@@ -6,4 +6,5 @@ public interface ICalc {
     void tnvunc(double tonna);
     void cvf(double c);
     void kvc(double k);
+    void history();
 }

@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class Frame extends JFrame {
     public Frame(){
-        setBounds(350, 350, 415, 230);
+        setBounds(100, 100, 415, 600);
         setTitle("Converter");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         add(new Panel());

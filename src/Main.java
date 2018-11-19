@@ -1,6 +1,6 @@
 import animals.Cat;
 import animals.Dog;
-import calculator.Frame;
+import converter.Frame;
 import function.NameOfDay;
 import myList.ListArr;
 
@@ -117,7 +117,7 @@ public class Main {
 
 //        new NameOfDay(1);
 
-        new converter.Frame();
+        new Frame();
 
 //        int[] ints = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 //        ListArr listArr = new ListArr(ints);

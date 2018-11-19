@@ -12,8 +12,10 @@ public class Panel extends JPanel implements Calc.ICallBack {
     private JButton bt_cvf;
     private JButton bt_kvc;
     private JButton bt_clear;
+    private JButton bt_history;
     private double value;
     private ICalc iCallBack;
+    private JLabel jLabel;
 
     Panel(){
         setLayout(null);
@@ -27,6 +29,8 @@ public class Panel extends JPanel implements Calc.ICallBack {
         add(bt_cvf);
         add(bt_kvc);
         add(bt_clear);
+        add(bt_history);
+        add(jLabel);
         listener();
     }
 
@@ -52,10 +56,19 @@ public class Panel extends JPanel implements Calc.ICallBack {
         bt_cvf.setBounds(285, 75, 100, 50);
 
         bt_kvc = new JButton("К в C");
-        bt_kvc.setBounds(235, 135, 100, 50);
+        bt_kvc.setBounds(175, 135, 100, 50);
 
         bt_clear = new JButton("Clear");
         bt_clear.setBounds(40, 90, 100, 50);
+
+        bt_history = new JButton("History");
+        bt_history.setBounds(285, 135, 100, 50);
+
+        jLabel = new JLabel();
+        jLabel.setBackground(Color.lightGray);
+        jLabel.setBounds(25, 10, 365, 400);
+        jLabel.setFont(new Font("Courier New", Font.PLAIN, 20));
+
     }
 
     private void listener(){
@@ -87,17 +100,21 @@ public class Panel extends JPanel implements Calc.ICallBack {
         });
 
         bt_clear.addActionListener(e -> {
-//            String temp1 = txtIn.getText();
-//            String temp2 = txtOut.getText();
-//            txtIn.setText(temp1.substring(0,0));
-//            txtOut.setText(temp2.substring(0,0));
             txtIn.setText("");
             txtOut.setText("");
+            jLabel.setText("");
         });
+
+        bt_history.addActionListener(e -> iCallBack.history());
     }
 
     @Override
     public void callBack(String message) {
         txtOut.setText(message);
+    }
+
+    @Override
+    public void callBackHistory(String message) {
+        jLabel.setText(message);
     }
 }

@@ -75,21 +75,8 @@ public class ListArr implements IList {
 
     @Override
     public void delPos(int pos) {
-        int[] tempList1 = new int[pos - 1];
-        int[] tempList2 = new int[newList.length];
-        for (int i = 0; i < pos - 1; i++) {
-            tempList1[i] = newList[i];
-        }
-        for (int i = 0; i < newList.length - 1; i++) {
-            tempList2[i] = newList[i];
-        }
-        int[] tempList3 = new int[tempList1.length + tempList2.length];
-        System.arraycopy(tempList1, 0, tempList3, 0, tempList1.length);
-        System.arraycopy(tempList2, pos + 1, tempList3, tempList1.length, tempList2.length);
-        newList = tempList3;
-        for (int i : newList) {
-            System.out.print(i + " ");
-        }
+        int[] tempList = new int[newList.length - 1];
+
     }
 
     @Override
