@@ -1,6 +1,6 @@
 package converter;
 
-public interface ICalc {
+public interface IController {
     void grvkg(double gramm);
     void kgvtn(double kg);
     void tnvunc(double tonna);

@@ -2,7 +2,6 @@ package converter;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.List;
 
 public class Panel extends JPanel implements Calc.ICallBack {
     private JTextField txtIn;
@@ -15,7 +14,7 @@ public class Panel extends JPanel implements Calc.ICallBack {
     private JButton bt_clear;
     private JButton bt_history;
     private double value;
-    private ICalc iCallBack;
+    private IController iCallBack;
     private JTextArea jTextArea;
 
     Panel(){
@@ -73,7 +72,7 @@ public class Panel extends JPanel implements Calc.ICallBack {
     }
 
     private void listener(){
-        iCallBack = new Calc(this);
+        iCallBack = new Controller(this);
 
         bt_grvkg.addActionListener(e -> {
             value = Double.parseDouble(txtIn.getText());
