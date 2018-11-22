@@ -3,8 +3,9 @@ package calculator;
 import javax.swing.*;
 import java.awt.*;
 
-public class Panel extends JPanel {
+public class Panel extends JPanel implements Calculation.ICallBack {
 
+    private ICalculation iCallBack;
     private JTextField txt;
     private JButton bt1;
     private JButton bt2;
@@ -22,6 +23,7 @@ public class Panel extends JPanel {
     private JButton bt_plus;
     private JButton bt_minus;
     private JButton bt_res;
+    private JTextArea jTextArea;
     private double firstValue = 0;
     private char operation = ' ';
 
@@ -46,6 +48,7 @@ public class Panel extends JPanel {
         add(bt_plus);
         add(bt_minus);
         add(bt_res);
+        add(jTextArea);
         listener();
     }
 
@@ -101,6 +104,13 @@ public class Panel extends JPanel {
 
         bt_plus = new JButton("+");
         bt_plus.setBounds(170, 220, 50, 50);
+
+        jTextArea = new JTextArea();
+        jTextArea.setLineWrap(true);
+        //jTextArea.setEnabled(false);
+        jTextArea.setBackground(Color.lightGray);
+        jTextArea.setBounds(225, 20, 205, 250);
+        jTextArea.setFont(new Font("Courier New", Font.PLAIN, 20));
     }
 
     private void listener(){
@@ -149,7 +159,28 @@ public class Panel extends JPanel {
             if (operation == '/' && secondValue == 0){
                 JOptionPane.showMessageDialog(null, "Делить на ноль нельзя!");
             }
-            txt.setText("" + new Calculation().calc(firstValue, operation, secondValue));
+            switch (operation){
+                case '+':
+                    iCallBack.sum(firstValue, secondValue);
+                case '-':
+                    iCallBack.sum(firstValue, secondValue);
+                case '*':
+                    iCallBack.sum(firstValue, secondValue);
+                case '/':
+                    iCallBack.sum(firstValue, secondValue);
+                default:
+                    JOptionPane.showMessageDialog(null,"Выберите корректную операцию!");
+            }
         });
+    }
+
+    @Override
+    public void callBack(String message) {
+        jTextArea.append(message);
+    }
+
+    @Override
+    public void callBackHistory(String message) {
+
     }
 }

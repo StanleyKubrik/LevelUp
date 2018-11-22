@@ -1,13 +1,7 @@
 package myList;
 
-import java.lang.reflect.Array;
-
 public class ListArr implements IList {
     private int[] newList;
-
-    public ListArr(int[] ints){
-        newList = ints;
-    }
 
     @Override
     public void clear() {
@@ -54,7 +48,11 @@ public class ListArr implements IList {
 
     @Override
     public void addPos(int pos, int val) {
-
+        int[] tempList = new int[newList.length + 1];
+        System.arraycopy(newList, 0, tempList, 0, pos);
+        System.arraycopy(newList, pos, tempList, pos + 1, tempList.length - pos - 1);
+        tempList[pos] = val;
+        newList = tempList;
     }
 
     @Override
@@ -76,7 +74,9 @@ public class ListArr implements IList {
     @Override
     public void delPos(int pos) {
         int[] tempList = new int[newList.length - 1];
-
+        System.arraycopy(newList, 0, tempList, 0, pos - 1);
+        System.arraycopy(newList, pos, tempList, pos - 1, newList.length - pos);
+        newList = tempList;
     }
 
     @Override

@@ -6,7 +6,7 @@ import java.awt.*;
 public class Frame extends JFrame {
 
     public Frame() throws HeadlessException {
-        setBounds(300, 300, 400, 320);
+        setBounds(300, 300, 450, 320);
         setTitle("Calculator");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         add(new Panel());

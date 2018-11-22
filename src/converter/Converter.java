@@ -4,11 +4,11 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Calc implements ICalc {
+public class Converter implements IConverter {
     private ICallBack iCallBack;
     private List<String> history;
 
-    public Calc(Calc.ICallBack iCallBack){
+    public Converter(Converter.ICallBack iCallBack){
         this.iCallBack = iCallBack;
         history = new ArrayList<>();
     }

@@ -3,7 +3,7 @@ package converter;
 import javax.swing.*;
 import java.awt.*;
 
-public class Panel extends JPanel implements Calc.ICallBack {
+public class Panel extends JPanel implements Converter.ICallBack {
     private JTextField txtIn;
     private JTextField txtOut;
     private JButton bt_grvkg;
@@ -66,8 +66,9 @@ public class Panel extends JPanel implements Calc.ICallBack {
 
         jTextArea = new JTextArea();
         jTextArea.setLineWrap(true);
+        //jTextArea.setEnabled(false);
         jTextArea.setBackground(Color.lightGray);
-        jTextArea.setBounds(15, 195, 340, 350);
+        jTextArea.setBounds(15, 195, 355, 350);
         jTextArea.setFont(new Font("Courier New", Font.PLAIN, 20));
     }
 
