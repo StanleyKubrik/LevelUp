@@ -1,4 +1,12 @@
 package person;
 
-public class Panel {
+import javax.swing.*;
+
+public class Panel extends JPanel {
+    private IController iController;
+
+    Panel(){
+        iController = new Controller();
+        setLayout(null);
+    }
 }
