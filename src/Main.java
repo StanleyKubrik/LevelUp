@@ -1,6 +1,6 @@
 import animals.Cat;
 import animals.Dog;
-import calculator.Frame;
+import person.Frame;
 import function.NameOfDay;
 import myList.ListArr;
 

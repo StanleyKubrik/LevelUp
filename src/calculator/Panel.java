@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class Panel extends JPanel implements Calculation.ICallBack {
 
-    private ICalculation iCallBack;
+    private IController iCallBack;
     private JTextField txt;
     private JButton bt1;
     private JButton bt2;
@@ -28,6 +28,7 @@ public class Panel extends JPanel implements Calculation.ICallBack {
     private char operation = ' ';
 
     Panel(){
+        iCallBack = new Controller(this);
         setLayout(null);
         setBackground(Color.GRAY);
         init();
@@ -107,7 +108,8 @@ public class Panel extends JPanel implements Calculation.ICallBack {
 
         jTextArea = new JTextArea();
         jTextArea.setLineWrap(true);
-        //jTextArea.setEnabled(false);
+        jTextArea.setEnabled(false);
+        jTextArea.setDisabledTextColor(Color.BLACK);
         jTextArea.setBackground(Color.lightGray);
         jTextArea.setBounds(225, 20, 205, 250);
         jTextArea.setFont(new Font("Courier New", Font.PLAIN, 20));
@@ -162,14 +164,19 @@ public class Panel extends JPanel implements Calculation.ICallBack {
             switch (operation){
                 case '+':
                     iCallBack.sum(firstValue, secondValue);
+                    break;
                 case '-':
-                    iCallBack.sum(firstValue, secondValue);
+                    iCallBack.diff(firstValue, secondValue);
+                    break;
                 case '*':
-                    iCallBack.sum(firstValue, secondValue);
+                    iCallBack.mult(firstValue, secondValue);
+                    break;
                 case '/':
-                    iCallBack.sum(firstValue, secondValue);
+                    iCallBack.div(firstValue, secondValue);
+                    break;
                 default:
                     JOptionPane.showMessageDialog(null,"Выберите корректную операцию!");
+                    break;
             }
         });
     }
