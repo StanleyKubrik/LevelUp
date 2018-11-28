@@ -20,8 +20,7 @@ public final class Mock {
     public void create(String n, String sn, int age){
         if (person != null) {
             int index = person.size();
-            index++;
-            person.add(new Person(index, n, sn, age));
+            person.add(new Person(++index, n, sn, age));
         }
     }
 
