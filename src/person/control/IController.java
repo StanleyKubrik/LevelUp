@@ -1,4 +1,4 @@
-package person;
+package person.control;
 
 public interface IController {
     void create();

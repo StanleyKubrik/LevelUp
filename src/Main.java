@@ -1,8 +1,4 @@
-import animals.Cat;
-import animals.Dog;
-import person.Frame;
-import function.NameOfDay;
-import myList.ListArr;
+import person.view.Frame;
 
 public class Main {
 

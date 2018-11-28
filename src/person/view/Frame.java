@@ -1,4 +1,4 @@
-package person;
+package person.view;
 
 import javax.swing.*;
 

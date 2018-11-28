@@ -1,4 +1,4 @@
-package person;
+package person.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,8 @@ public final class Mock {
     public void create(String n, String sn, int age){
         if (person != null) {
             int index = person.size();
-            person.add(new Person(++index, n, sn, age));
+            index++;
+            person.add(new Person(index, n, sn, age));
         }
     }
 
